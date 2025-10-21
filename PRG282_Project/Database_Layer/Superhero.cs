@@ -48,7 +48,7 @@ namespace PRG282_Project.Database_Layer
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error reading superheroes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show($"Error reading superheroes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return heros;
 
