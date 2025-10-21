@@ -35,7 +35,7 @@ namespace PRG282_Project.Database_Layer
             ThreatLevel = threatLevel;
         }
 
-        
+        // Read Superheroes from file
         public List<string> ReadSuperheroes()
         {
            List<string> heros = new List<string>();
@@ -48,6 +48,7 @@ namespace PRG282_Project.Database_Layer
             }
             catch (Exception ex)
             {
+                MessageBox.Show($"Error reading superheroes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return heros;
 
@@ -71,7 +72,7 @@ namespace PRG282_Project.Database_Layer
                 sw.WriteLine(ToString());
             }
         }
-
+        //Update Superhero
         public void UpdateSuperhero(string field, string newValue)
         {
             try
@@ -124,7 +125,7 @@ namespace PRG282_Project.Database_Layer
                 MessageBox.Show($"Error updating superhero: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //Delete Superhero
         public void DeleteSuperhero()
         {
             try
@@ -160,7 +161,7 @@ namespace PRG282_Project.Database_Layer
         }
 
 
-
+        // Get all superheroes as a list of Superhero objects
         public List<Superhero> GetAllSuperheroes()
         {
             List<Superhero> superheroes = new List<Superhero>();
@@ -193,7 +194,7 @@ namespace PRG282_Project.Database_Layer
             return superheroes;
         }
 
-
+        // Override ToString method to format superhero details
         public override string ToString()
         {
             return $"{ID}|{Name}|{Age}|{SuperPower}|{Gender}|{ExamScore}|{Ranking}|{ThreatLevel}";
