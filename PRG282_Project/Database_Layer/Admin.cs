@@ -11,7 +11,7 @@ namespace PRG282_Project.Database_Layer
     {
         public Admin() { }
 
-        string path = @"C:\Users\King\source\repos\PRG282_Project\PRG282_Project\bin\Debug\Admin.txt";
+        string path = @"Admin.txt";
 
        public bool Login(string username , string password)
         {
